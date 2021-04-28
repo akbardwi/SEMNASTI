@@ -1,10 +1,19 @@
 body {
 font-family: 'Roboto', sans-serif;
 background: #273040;
-position:relative;
+width: 100% !important;
+margin: 0;
+padding: 0;
 }
-
-
+*{
+	box-sizing: border-box;
+}	
+main{
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  display: contents;
+}
 /*-----------text-animation----------*/
 
 .text {
@@ -55,12 +64,7 @@ position:relative;
 }
 
 
-
-
 /*-----------text-animation----------*/
-
-
-
 
 
 @media only screen and ( min-width:768px ){
@@ -106,13 +110,17 @@ position:relative;
 
 
 .wrapper{
-  position:relative;
-  width:100%;
-  background: url(./img/bubble2.png) 140% 6% no-repeat, url(./img/lines.png) top center repeat-y #273040;
-  background-size: 44%, 70%;
-  overflow:hidden;
+  width:100% !important;
+  background: #273040;
+  padding: 0;
+  margin: 0;
 }
-
+@media (max-width:800px) {
+  .wrapper{
+    width: 100% !important;
+  }
+  
+}
 
 
 .planewrap{
@@ -143,11 +151,6 @@ position:relative;
   }
 }
  
-.navbar-scroll{
-   max-width:250px;
-   width:250px;
-}
-
 
 .bannertxt .text h1{
   font-size:9vw;
@@ -180,10 +183,6 @@ position:relative;
 
 
 
-
-
-
-
 @keyframes wave{
 20%{
    border-radius:45% 55% 62% 38% / 53% 51% 49% 47%;
@@ -198,9 +197,6 @@ position:relative;
    border-radius:60% 40% 32% 68% / 38% 36% 64% 62%;
 }
 }
-
-
-
 
 
 
@@ -240,18 +236,16 @@ position:relative;
   padding:70px 0px;
   width:100%;
   position:relative;
-  background: url(./img/bubble3.png) 140% 100% no-repeat;
+  background: url('../img/bubble3.png') 140% 100% no-repeat;
   background-size: 44%, 70%; 
 }
 
 
-
 .wavy-g{
-    background: url(./img/wavy.png) top center no-repeat;
+  background-image: url('assets/img/wavy.png') top center no-repeat;
 	background-size:100%;
-    padding: 15% 7%;
-    width: 100%;
-    position: relative;
+  width: 100% !important;
+  position: relative;
 }
 
 .heading{
@@ -293,8 +287,6 @@ position:relative;
    top:-40px;
 }
 
-
-
 .circle-shape{
 background-color:#1a202b;
 width:230px;
@@ -311,11 +303,17 @@ animation:wave 5s linear infinite;
 }
 
 .worktext h3{
-   font-size:70px;
+  font-size:70px;
   color:white;
   font-weight:700;
 }
-
+@media (max-width:800px) {
+  .worktext h3{
+    font-size:5vw;
+    color:white;
+    font-weight:700;
+  }
+}
 .worktext p{
   font-size:22px;
   line-height:35px;
@@ -397,6 +395,7 @@ animation:wave 5s linear infinite;
   position:relative;
   z-index:30!important;
   background-color: #273040bd!important;
+  width: 100% !important;
 }
 
 .abouttext {
@@ -405,8 +404,8 @@ animation:wave 5s linear infinite;
 
 
 .work-bg{
-box-shadow: 0 40px 50px #0000004d;
-	}
+
+}
 	
 	.strategy {
     margin:20% 0 20% 0!important;
@@ -512,10 +511,6 @@ animation:wave 5s linear infinite;
    color: #4f5765;
 }
 
-
-
-
-
 .scroll-indicator{
   width:10px;
   height:50px;
@@ -540,10 +535,7 @@ animation:wave 5s linear infinite;
   }
 }
   
-  
-  
-  
-  .overlay {
+.overlay {
   position: fixed;
   background: #273040;
   top: 0;
@@ -593,31 +585,9 @@ animation:wave 5s linear infinite;
     border-radius: 50%;
 }
 
-
-.navcolumn h2 {
-    text-align: left;
-    display: block;
-	font-weight:700;
-    margin-bottom: 30px;
-    font-size: 14px;
-	font-family:'Montserrat',sans-serif;
-    letter-spacing:2px;
-    color: #01b9c2;
-    text-transform: uppercase;
-}
-
 .m-200{
   margin-top:20%;
   padding-left:30px;
-}
-.navcolumn a {
-     font-family:'Montserrat',sans-serif;
-    text-align: left;
-    display: block;
-	font-weight:600;
-    font-size: 30px;
-    color: #fff;
-    text-decoration: underline;
 }
 .heading-stroke{
     display:inline-block;
@@ -743,4 +713,159 @@ animation:wave 5s linear infinite;
     .section__title+p{
         font-size:1rem
     }
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.rows{
+	display: flex;
+	flex-wrap: wrap;
+}
+.header{
+	position: absolute;
+	left:0;
+	top:10px;
+	width: 100%;
+	z-index: 99;
+}
+.header .rows{
+	justify-content: space-between;
+	align-items: center;
+}
+.header .logo a{
+	font-size: 30px;
+	text-decoration: none;
+	color:#fff;
+	font-weight: 600;
+}
+.header .nav-toggle{
+	height: 45px;
+	width: 45px;
+	background-color: #333333;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header .nav-toggle span{
+	height: 3px;
+	width: 24px;
+	background-color: #ffffff;
+	display: block;
+	position: relative;
+}
+.header .nav-toggle span:before,
+.header .nav-toggle span:after{
+	content: '';
+	position: absolute;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: #ffffff;
+}
+.header .nav-toggle span:before{
+	top:-8px;
+}
+.header .nav-toggle span:after{
+	top:8px;
+}
+/*nav*/
+.nav-overlay{
+	position: fixed;
+	left:0;
+	top:0;
+	z-index: 499;
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+	transform: translateX(-100%);
+}
+.nav-overlay.open{
+    transform: translateX(0%);	
+}
+.nav{
+	position: fixed;
+	left:0;
+	top:0;
+	background-color: #111111;
+	height: 100%;
+	width: 260px;
+	z-index: 500;
+	transform: translateX(-260px);
+	overflow-y: auto;
+}
+.nav .head{
+	position: sticky;
+	position: -webkit-sticky;
+	top:0;
+	z-index: 501;
+	background-color: #111111;
+	width: 100%;
+
+}
+.nav.open{
+    transform: translateX(0px);	
+}
+.nav strong{
+	height:50px;
+	color: #dddddd;
+	font-size: 16px;
+	text-align: left;
+	line-height: 50px;
+	padding:0 50px 0 15px;
+	display: block;
+	width: 100%;
+	font-weight: 600;
+	border-bottom: 1px solid #333333;
+}
+.nav .close{
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	right:0;
+	top:0;
+	font-size: 32px;
+	color:#dddddd;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+}
+.nav ul{
+	margin:10px 0 0;
+	padding:0;
+	list-style: none;
+  top: 0;
+}
+.nav ul li{
+	display: block;
+}
+.nav ul li a{
+	color: #ffffff;
+	font-size: 16px;
+	text-transform: capitalize;
+	text-decoration: none;
+	display: block;
+	padding: 8px 15px;
+	position: relative;
+	transition:all 0.5s ease;
+}
+.nav ul li a:before{
+	content: '';
+	position: absolute;
+	left:0;
+	top:0;
+	width:0px;
+	height: 100%;
+	background-color: #ffffff;
+	z-index: -1;
+	transition:all 0.5s ease;
+}
+.nav ul li a:hover:before{
+	width: 100%;
+}
+.nav ul li a:hover{
+	color: #111111;
 }
