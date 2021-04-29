@@ -238,7 +238,7 @@ main{
   padding:70px 0px;
   width:100%;
   position:relative;
-  background: url('../img/bubble3.png') 140% 100% no-repeat;
+  /* background: url('../img/bubble3.png') 140% 100% no-repeat; */
   background-size: 44%, 70%; 
 }
 
@@ -332,9 +332,9 @@ animation:wave 5s linear infinite;
   font-weight:500;
 }
 
-.work{
+/* .work{
   padding:13% 0%;
-}
+} */
 
 .workpic{
   position:relative;
@@ -517,7 +517,7 @@ animation:wave 5s linear infinite;
   width:10px;
   height:50px;
   position:absolute;
-  bottom:16px;
+  bottom:100px;
   left:49.7%;
   transform:translatex(-50%);
   z-index:1;
@@ -992,7 +992,7 @@ iframe {
 
 .container-login100 {
   width: 100%;  
-  min-height: 100vh;
+  min-height: 60vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1001,7 +1001,7 @@ iframe {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 35px;
   /* background: #f2f2f2;   */
 }
 

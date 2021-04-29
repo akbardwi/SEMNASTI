@@ -106,3 +106,11 @@ $(document).ready(function() {
         $('.overlay').removeClass('open');
     });
 });
+function aos_init() {
+    AOS.init({
+      duration: 1000,
+    });
+  }
+  $(window).on('load', function() {
+    aos_init();
+});
