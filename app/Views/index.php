@@ -161,10 +161,11 @@
                 </div>
                 <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy2.png" class="img-fluid" width="" height="" alt=""></div>
                 <img src="<?= base_url(); ?>/assets/img/TEKS.png" alt="" class="responsive" width="" height="">
-                <div class="limiter" data-aos="zoom-in" data-aos-delay="100" >
+                <div class="limiter" data-aos="zoom-in" data-aos-delay="100" id="registration">
                     <div class="container-login100">
                         <div class="wrap-login100">
-                            <form class="login100-form validate-form">
+                            <form action="<?= base_url("auth/registration"); ?>" method="post" class="login100-form validate-form">
+                                <?= csrf_field(); ?>
                                 <div class="wrap-input100 validate-input" data-validate = "Nama harus di isi">
                                     <input class="input100" type="text" name="nama">
                                     <span class="focus-input100" data-placeholder="Nama Lengkap"></span>
@@ -174,17 +175,17 @@
                                     <span class="focus-input100" data-placeholder="Email"></span>
                                 </div>
                                 <div class="wrap-input100 validate-input" data-validate = "Asal institusi harus di isi">
-                                    <input class="input100" type="text" name="institusi">
+                                    <input class="input100" type="text" name="institution">
                                     <span class="focus-input100" data-placeholder="Asal Institusi"></span>
                                 </div>
-                                <div class="wrap-input100 validate-input" data-validate = "Nomor whatapp harus di isi">
-                                    <input class="input100" type="text" name="nowa">
-                                    <span class="focus-input100" data-placeholder="Nomer whatapp"></span>
+                                <div class="wrap-input100 validate-input" data-validate = "Nomor WhatsApp harus di isi">
+                                    <input class="input100" type="text" name="hp">
+                                    <span class="focus-input100" data-placeholder="Nomer WhatsApp"></span>
                                 </div>                
                                 <div class="container-login100-form-btn">
                                     <div class="wrap-login100-form-btn">
                                         <div class="login100-form-bgbtn"></div>
-                                        <button class="login100-form-btn">
+                                        <button type="submit" class="login100-form-btn">
                                         Register
                                         </button>
                                     </div>
