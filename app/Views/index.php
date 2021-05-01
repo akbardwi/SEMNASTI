@@ -166,21 +166,28 @@
                         <div class="wrap-login100">
                             <form action="<?= base_url("auth/registration"); ?>" method="post" class="login100-form validate-form">
                                 <?= csrf_field(); ?>
-                                <div class="wrap-input100 validate-input" data-validate = "Nama harus di isi">
-                                    <input class="input100" type="text" name="nama">
-                                    <span class="focus-input100" data-placeholder="Nama Lengkap"></span>
+                                <div class="wrap-input100 validate-input" data-validate = "Masukkan Nama">
+                                    <label>Nama Lengkap : </label>
+                                    <input class="input100" type="text" name="nama" >
+                                    <span class="focus-input100" ></span>
                                 </div>
-                                <div class="wrap-input100 validate-input" data-validate = "contoh email valid: a@b.c">
-                                    <input class="input100" type="text" name="email">
-                                    <span class="focus-input100" data-placeholder="Email"></span>
+
+                                <div class="wrap-input100 validate-input" data-validate="Masukkan Asal Sekolah">
+                                    <label>Asal Instansi : </label>
+                                    <input class="input100" type="text" name="instansi">
+                                    <span class="focus-input100"></span>
                                 </div>
-                                <div class="wrap-input100 validate-input" data-validate = "Asal institusi harus di isi">
-                                    <input class="input100" type="text" name="institution">
-                                    <span class="focus-input100" data-placeholder="Asal Institusi"></span>
+
+                                <div class="wrap-input100 validate-input" data-validate="Masukkan Email">
+                                    <label>Email : </label>
+                                    <input class="input100" type="email" name="email">	
+                                    <span class="focus-input100"></span>
                                 </div>
-                                <div class="wrap-input100 validate-input" data-validate = "Nomor WhatsApp harus di isi">
-                                    <input class="input100" type="text" name="hp">
-                                    <span class="focus-input100" data-placeholder="Nomer WhatsApp"></span>
+
+                                <div class="wrap-input100 validate-input" data-validate="Masukkan Nomor HP">
+                                    <label>No. Whatapp : </label>
+                                    <input class="input100" type="number" name="hp">
+                                    <span class="focus-input100"></span>
                                 </div>                
                                 <div class="container-login100-form-btn">
                                     <div class="wrap-login100-form-btn">
