@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2021 at 05:22 AM
+-- Generation Time: May 01, 2021 at 06:13 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -53,7 +53,8 @@ CREATE TABLE `peserta` (
   `email` varchar(255) NOT NULL,
   `instansi` text NOT NULL,
   `hp` text NOT NULL,
-  `tanggal_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `htm` int(1) NOT NULL,
+  `tanggal_daftar` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
