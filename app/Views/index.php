@@ -164,29 +164,56 @@
                 <div class="limiter" data-aos="zoom-in" data-aos-delay="100" id="registration">
                     <div class="container-login100">
                         <div class="wrap-login100">
+                            <?php
+                            $inputs = session()->getFlashdata('inputs');
+                            $error = session()->getFlashdata('error');
+                            $errors = session()->getFlashdata('errors');
+                            $success = session()->getFlashdata('success');
+                            if(!empty($errors)){ ?>
+                            <div class="alert alert-danger" role="alert">
+                                <ul>
+                                <?php foreach ($errors as $errors) : ?>
+                                    <li><?= esc($errors) ?></li>
+                                <?php endforeach ?>
+                                </ul>
+                            </div>
+                            <br />
+                            <?php } if(!empty($error)){ ?>
+                            <div class="alert alert-danger" role="alert">
+                                <ul>
+                                    <li><?= esc($error) ?></li>
+                                </ul>
+                            </div>
+                            <br />
+                            <?php } if(!empty($success)){ ?>
+                                <div class="alert alert-success" role="alert">
+                                    <?= esc($success) ?><br />
+                                </div>
+                                <br />
+                            <?php } ?>
                             <form action="<?= base_url("auth/registration"); ?>" method="post" class="login100-form validate-form">
                                 <?= csrf_field(); ?>
                                 <div class="wrap-input100 validate-input" data-validate = "Masukkan Nama">
                                     <label>Nama Lengkap : </label>
-                                    <input class="input100" type="text" name="nama" >
+                                    <input class="input100" type="text" name="nama" required>
                                     <span class="focus-input100" ></span>
                                 </div>
 
                                 <div class="wrap-input100 validate-input" data-validate="Masukkan Asal Sekolah">
                                     <label>Asal Instansi : </label>
-                                    <input class="input100" type="text" name="instansi">
+                                    <input class="input100" type="text" name="institution" required>
                                     <span class="focus-input100"></span>
                                 </div>
 
                                 <div class="wrap-input100 validate-input" data-validate="Masukkan Email">
                                     <label>Email : </label>
-                                    <input class="input100" type="email" name="email">	
+                                    <input class="input100" type="email" name="email" required>	
                                     <span class="focus-input100"></span>
                                 </div>
 
-                                <div class="wrap-input100 validate-input" data-validate="Masukkan Nomor HP">
-                                    <label>No. Whatapp : </label>
-                                    <input class="input100" type="number" name="hp">
+                                <div class="wrap-input100 validate-input" data-validate="Masukkan Nomor HP / WhatsApp">
+                                    <label>Nomor HP / WhatsApp : </label>
+                                    <input class="input100" type="number" name="hp" required>
                                     <span class="focus-input100"></span>
                                 </div>                
                                 <div class="container-login100-form-btn">
