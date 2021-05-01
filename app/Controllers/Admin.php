@@ -42,6 +42,11 @@ class Admin extends BaseController{
         $db = \Config\Database::connect();
         $model = new Peserta_model();
         $data = $model->read($id);
+        if($data == null){
+            $session->setFlashdata('error', 'ID Peserta tidak ditemukan');
+            return redirect()->to(base_url('admin/dashboard'));
+        }
+        
         if($data['htm'] == 0){
             $query = $db->query("UPDATE peserta SET htm = 1 WHERE id = '$id'");
         } else {
