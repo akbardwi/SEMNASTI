@@ -15,6 +15,7 @@ main{
   margin: 0px;
   padding: 0;
   display: contents;
+
 }
 /*-----------text-animation----------*/
 
@@ -311,7 +312,7 @@ animation:wave 5s linear infinite;
 }
 @media (max-width:800px) {
   .worktext h3{
-    font-size:5vw;
+    font-size:15vw;
     color:white;
     font-weight:700;
   }
@@ -741,6 +742,10 @@ animation:wave 5s linear infinite;
 	text-decoration: none;
 	color:#fff;
 	font-weight: 600;
+}
+.header .logo img {
+  height: 100%;
+  width: 30%;
 }
 .header .nav-toggle{
 	height: 45px;
@@ -1448,4 +1453,86 @@ footer{
   opacity: .4;
   font-weight: 200;
   color: #ffff;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #273040;
+}
+
+/* #preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #37517e;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+} */
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.image {
+  position: fixed;
+  /* content: "";
+  position: fixed; */
+  /* top: calc(50% - 50px);
+  left: calc(50% - 50px); */
+ /* border: 6px solid #77D0EE; */
+  /* border-top-color: #fff; */
+  /* border-bottom-color: #fff; */
+  /* border-radius: 50%;
+  width: 100px;
+  height: 100px; */
+  background: none;
+  width: 50%;
+  height: 20%;
+  top: 40%;
+  left: 33%; 
+  transform: translate(-20%, -30%);
+  
+}
+.image2{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: fadeIn 1s infinite alternate;
+  padding-top: 190px;
+}
+@media (max-width:700px){
+  .image{
+    width: 60%;
+    height: 10%;
+  }
 }

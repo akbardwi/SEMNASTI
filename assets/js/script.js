@@ -114,3 +114,11 @@ function aos_init() {
   $(window).on('load', function() {
     aos_init();
 });
+//loader//
+$(window).on('load', function() {
+    if ($('#preloader').length) {
+      $('#preloader').delay(500).fadeOut('slow', function() {
+        $(this).remove();
+      });
+    }
+});

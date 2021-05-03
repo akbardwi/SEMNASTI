@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -12,7 +12,10 @@
         <link href="<?= base_url(); ?>/assets/vendor/aos/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="<?= base_url(); ?>/assets/css/style1.css" rel="stylesheet">
-        <title>SEMNASTI</title>        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <title>SEMNASTI</title>
+        <!-- //favicon// -->
+        <link href="<?= base_url(); ?>/assets/img/logosemnasti.png" rel="icon" sizes="16x16 32x32" type="image/png">        
     </head>  
     <body>
         <main>
@@ -21,7 +24,7 @@
                 <div class="contain">
                     <div class="rows">
                         <div class="logo">
-                            <a href="#">Logo</a>
+                            <a href="#"><img src="assets/img/logosemnasti.png"></a>
                         </div>
                         <div class="nav-toggle">
                             <span></span>
@@ -248,6 +251,10 @@
                 </div>
             </footer>
         </main>
+        <div id="preloader">
+            <img class="image animate__animated animate__fadeOut" src="<?= base_url(); ?>/assets/img/logosemnasti.png">
+            <!--<img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">-->
+        </div>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
