@@ -39,12 +39,12 @@
                     <div class="close">&times;</div>
                     <br>
                     <ul>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">lorem</a></li>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="#youwillget">YOU WILL GET</a></li>
+                        <li><a href="#series">OUR SERIES</a></li>
+                        <li><a href="#registration">REGISTATION</a></li>
+                        <!-- <li><a href="#">lorem</a></li>
+                        <li><a href="#">lorem</a></li> -->
                     </ul>
                 </div>
             </nav>
@@ -73,7 +73,7 @@
 
             <section class="about-wrapper">
                 <div class="container">
-                    <img src="<?= base_url(); ?>/assets/img/TEKS.png" alt="" class="responsive" width="" height="">
+                    <img src="<?= base_url(); ?>/assets/img/Asset1.png" alt="" class="responsive" width="" height="" id="youwillget">
                     <div class="row d-flex  justify-content-center">
                         <div class="col-md-10">
                             <div class="row">
@@ -119,7 +119,7 @@
 
             <section class="work-bg">
                 <div class="container">
-                    <img src="<?= base_url(); ?>/assets/img/TEKS.png" alt="" class="responsive" width="" height="">
+                    <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height="" id="series">
                     <div class="work work1">
                         <div class="row d-flex align-items-center">
                             <div class="col-md-5 col-sm-6 col-12">
@@ -163,8 +163,8 @@
                     </div>
                 </div>
                 <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy2.png" class="img-fluid" width="" height="" alt=""></div>
-                <img src="<?= base_url(); ?>/assets/img/TEKS.png" alt="" class="responsive" width="" height="">
-                <div class="limiter" data-aos="zoom-in" data-aos-delay="100" id="registration">
+                <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration">
+                <div class="limiter" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="container-login100">
                         <div class="wrap-login100">
                             <?php
