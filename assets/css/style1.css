@@ -112,18 +112,21 @@ main{
 }
 
 
-.wrapper{
-  width:100% !important;
-  background: #273040;
-  padding: 0;
-  margin: 0;
-  background:url(../img/lines.png) top center repeat-y;
-  overflow: hidden;
-  position: relative;
-}
 @media (max-width:800px) {
   .wrapper{
     width: 100% !important;
+  }
+  
+}
+@media (min-width:810px) {
+  .wrapper{
+    width:100% !important;
+    background: #273040;
+    padding: 0;
+    margin: 0;
+    background:url(../img/lines.png) top center repeat-y;
+    overflow: hidden;
+    position: absolute;
   }
   
 }
