@@ -149,7 +149,7 @@
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0" id="first">
                                     <div class="workintro">
                                         <div class="worktext">
-                                            <h3>Pembicara2 #2</h3>
+                                            <h3>Pembicara #2</h3>
                                             <p>Aure Wines needed to improve their presence in the Ontario wine
                                             market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                             Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 

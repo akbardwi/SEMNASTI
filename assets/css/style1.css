@@ -326,7 +326,7 @@ animation:wave 5s linear infinite;
 }
 @media (max-width:800px) {
   .worktext h3{
-    font-size:15vw;
+    font-size:14vw;
     color:white;
     font-weight:700;
   }
