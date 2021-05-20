@@ -87,8 +87,8 @@
                                             <img src="<?= base_url(); ?>/assets/img/direction.png" class="img-fluid" width="" height="" alt="">
                                         </div>                                        
                                         <h3 class="heading">Public<BR>Relation</h3>
-                                        <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The
-                                        passage is attributed to an unknown typesetter in the 15th century who is thought</p>
+                                        <!-- <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The
+                                        passage is attributed to an unknown typesetter in the 15th century who is thought</p> -->
                                     </div>
                                 </div>                                
                                 <div class="col-md-6">
@@ -99,8 +99,8 @@
                                         </div>                                        
                                         <div class=""></div>
                                         <h3 class="heading">Free <br>E-Certificate</h3>
-                                        <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passa
-                                        ge is attributed to an unknown typesetter in the 15th century who is thought</p>
+                                        <!-- <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passa
+                                        ge is attributed to an unknown typesetter in the 15th century who is thought</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -110,8 +110,8 @@
                                             <img src="<?= base_url(); ?>/assets/img/design.png" class="img-fluid" width="" height="" alt="">
                                         </div>                                        
                                         <h3 class="heading">Merchandise</h3>
-                                        <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The p
-                                        assage is attributed to an unknown typesetter in the 15th century who is thought</p>
+                                        <!-- <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The p
+                                        assage is attributed to an unknown typesetter in the 15th century who is thought</p> -->
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                             <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0">
                                 <div class="workintro">
                                     <div class="worktext text-right">
-                                        <h3>SEMNASTI DAY #1</h3>
+                                        <h3>Pembicara #1</h3>
                                         <p>Aure Wines needed to improve their presence in the Ontario wine
                                         market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                         Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
@@ -148,7 +148,7 @@
                             <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0" id="first">
                                 <div class="workintro">
                                     <div class="worktext">
-                                        <h3>SEMNASTI DAY #2</h3>
+                                        <h3>Pembicara2 #2</h3>
                                         <p>Aure Wines needed to improve their presence in the Ontario wine
                                         market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                         Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
@@ -248,14 +248,14 @@
                         <div class="footer-col">
                             <h4>Contact Person</h4>
                             <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6282241698249"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6285326629159"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
                             <h4>Sponshorship</h4>
                             <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>085329683273 (Raka)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0853-2968-3273 (Raka)</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
