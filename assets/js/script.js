@@ -29,6 +29,7 @@ function hideNav(){
    navOverlay.style.transition = "all 0.5s ease 0.3s";
    navOverlay.classList.remove("open");
 }
+
 var words = document.getElementsByClassName('word');
 var wordArray = [];
 var currentWord = 0;
@@ -122,3 +123,11 @@ $(window).on('load', function() {
       });
     }
 });
+AOS.init()
+$('#radioUmum').on('click', function () {
+    $('#mahasiswa').hide()
+})
+
+$('#radioMhs').on('click', function () {
+    $('#mahasiswa').show()
+})

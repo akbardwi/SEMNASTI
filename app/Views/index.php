@@ -12,6 +12,7 @@
         <link href="<?= base_url(); ?>/assets/vendor/aos/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="<?= base_url(); ?>/assets/css/style1.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/custom-input.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,7 +58,7 @@
                 <div class="banner">
                     <div class="planewrap"></div>
                     <div class="bannersplat">
-                        <div class="scotty"><img src="<?= base_url(); ?>/assets/img/scotland.png" width="" height="" alt=""></div>
+                        <!-- <div class="scotty"><img src="<?= base_url(); ?>/assets/img/scotland.png" width="" height="" alt=""></div> -->
                         <div class="fluid"></div>
                         <div class="fluiddark"></div>
                         <div class="text">
@@ -72,7 +73,7 @@
                         <img src="<?= base_url(); ?>/assets/img/scroll.svg" class="img-fluid"/>
                     </div>
                 </div>
-                <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy.png" class="img-fluid" width="" height="" alt=""></div>
+                <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
                 </div>
 
                 <section class="about-wrapper">
@@ -124,18 +125,22 @@
                 <section class="work-bg">
                     <div class="container">
                         <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height="" id="series">
+                        <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="300">
+                            <div class="parallelogram"></div>
+                        </div>
                         <div class="work work1">
                             <div class="row d-flex align-items-center">
-                                <div class="col-md-5 col-sm-6 col-12">
+                                <div class="col-md-5 col-sm-6 col-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-offset="300">
                                     <div class="workpic">
                                         <div class="big-circle-shape"></div>
-                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1.png" class="img-fluid" width="" height="" alt="" data-aos="zoom-in" data-aos-delay="100" >
+                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1.png" class="img-fluid" width="" height="" alt="" >
                                     </div>
                                 </div>                            
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0">
-                                    <div class="workintro">
+                                    <div class="workintro" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext text-right">
-                                            <h3>Pembicara #1</h3>
+                                            <h3>PETRA NOVANDI</h3>
+                                            <h6>SENIOR DEVELOPER ADVOCAT AMAZON WEB SERVICE</h6>
                                             <p>Aure Wines needed to improve their presence in the Ontario wine
                                             market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                             Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
@@ -143,101 +148,120 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="300">
+                            <div class="parallelogram1"></div>
                         </div>
                         <div class="work work2">
                             <div class="row d-flex align-items-center">
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0" id="first">
-                                    <div class="workintro">
+                                    <div class="workintro" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext">
-                                            <h3>Pembicara #2</h3>
+                                            <h3>DENNY PRASTYA</h3>
+                                            <h6>GOPAY SYSTEM AUTOMATION</h6>
                                             <p>Aure Wines needed to improve their presence in the Ontario wine
                                             market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                             Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-sm-6 col-12 offset-md-1" id="second">
+                                <div class="col-md-5 col-sm-6 col-12 offset-md-1" id="second" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-offset="300">
                                     <div class="workpic">
                                         <div class="big-circle-shape" ></div>
-                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA2.png" class="img-fluid" width="" height="" alt="" data-aos="zoom-in" data-aos-delay="100" >
+                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA2.png" class="img-fluid" width="" height="" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy2.png" class="img-fluid" width="" height="" alt=""></div>
+                    <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container">
                         <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration">
-                        <div class="limiter" data-aos="zoom-in" data-aos-delay="100" >
-                            <div class="container-login100">
-                                <div class="wrap-login100">
-                                    <?php
-                                    $inputs = session()->getFlashdata('inputs');
-                                    $error = session()->getFlashdata('error');
-                                    $errors = session()->getFlashdata('errors');
-                                    $success = session()->getFlashdata('success');
-                                    if(!empty($errors)){ ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <ul>
-                                        <?php foreach ($errors as $errors) : ?>
-                                            <li><?= esc($errors) ?></li>
-                                        <?php endforeach ?>
-                                        </ul>
-                                    </div>
-                                    <br />
-                                    <?php } if(!empty($error)){ ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <ul>
-                                            <li><?= esc($error) ?></li>
-                                        </ul>
-                                    </div>
-                                    <br />
-                                    <?php } if(!empty($success)){ ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?= esc($success) ?><br />
+                        <div class="modal-dialog">
+                            <div class="modal-content cstm">
+                                <form action="<?= base_url('auth/register_ot'); ?>" method="post">
+                                    <?= csrf_field(); ?>
+                                    <div class="row justify-content-between">
+                                        <div class="col-4 mb-3 cstmtop">
+                                            <p class="radio-label">Kategori Peserta</p>
                                         </div>
-                                        <br />
-                                    <?php } ?>
-                                    <form action="<?= base_url("auth/registration"); ?>" method="post" class="login100-form validate-form">
-                                        <?= csrf_field(); ?>
-                                        <div class="wrap-input100 validate-input" data-validate = "Masukkan Nama">
-                                            <label>Nama Lengkap : </label>
-                                            <input class="input100" type="text" name="nama" required>
-                                            <span class="focus-input100" ></span>
-                                        </div>
-
-                                        <div class="wrap-input100 validate-input" data-validate="Masukkan Asal Sekolah">
-                                            <label>Asal Instansi : </label>
-                                            <input class="input100" type="text" name="institution" required>
-                                            <span class="focus-input100"></span>
-                                        </div>
-
-                                        <div class="wrap-input100 validate-input" data-validate="Masukkan Email">
-                                            <label>Email : </label>
-                                            <input class="input100" type="email" name="email" required>	
-                                            <span class="focus-input100"></span>
-                                        </div>
-
-                                        <div class="wrap-input100 validate-input" data-validate="Masukkan Nomor HP / WhatsApp">
-                                            <label>Nomor HP / WhatsApp : </label>
-                                            <input class="input100" type="number" name="hp" required>
-                                            <span class="focus-input100"></span>
-                                        </div>                
-                                        <div class="container-login100-form-btn">
-                                            <div class="wrap-login100-form-btn">
-                                                <div class="login100-form-bgbtn"></div>
-                                                <button type="submit" class="login100-form-btn">
-                                                Register
-                                                </button>
+                                        <div class="col text-right cstmtop">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="radioMhs" value="Mahasiswa" name="otCategory"
+                                                    class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Mahasiswa"){ echo "checked"; } ?>>
+                                                <label class="custom-control-label" for="radioMhs">Udinus</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="radioUmum" value="Umum" name="otCategory"
+                                                    class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Umum"){ echo "checked"; } ?>>
+                                                <label class="custom-control-label" for="radioUmum">Umum</label>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <hr style="border-top: 5px dotted black">
+                                    <div class="modal-body">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nama_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nama_ot']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Masukkan Nama</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">person</i>
+                                            </label>
+                                        </div>
+                                        <div class="row" id="mahasiswa">
+                                            <div class="col-md-6">
+                                                <div class="omrs-input-group">
+                                                    <label class="omrs-input-underlined">
+                                                        <input type="text" name="kampus_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['kampus_ot']; ?>" <?php } ?>>
+                                                        <span class="omrs-input-label">Asal Kampus</span>
+                                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                        <i class="material-icons">school</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="omrs-input-group">
+                                                    <label class="omrs-input-underlined">
+                                                        <input type="text" name="nim_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nim_ot']; ?>" <?php } ?>>
+                                                        <span class="omrs-input-label">NIM</span>
+                                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                        <i class="material-icons">image_aspect_ratio</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="number" name="wa_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['wa_ot']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nomor Whatsapp</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">phone_android</i>
+                                            </label>
+                                        </div>
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="email" name="email_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['email_ot']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Email</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">email</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="container-login100-form-btn">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+                                            <button type="submit" class="login100-form-btn">
+                                                Register
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy.png" class="img-fluid" width="" height="" alt=""></div>
+                </div>        
+                    <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/hiring.png" class="img-fluid" width="" height="" alt=""></div>
                 </section>
                 <footer class="footer">
@@ -249,14 +273,14 @@
                             <div class="footer-col">
                                 <h4>Contact Person</h4>
                                 <ul>
-                                    <li><a href="https://api.whatsapp.com/send?phone=6282241698249"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
-                                    <li><a href="https://api.whatsapp.com/send?phone=6285326629159"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
                                 </ul>
                             </div>
                             <div class="footer-col">
                                 <h4>Sponshorship</h4>
                                 <ul>
-                                    <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white; padding-right:10px;"></i>0853-2968-3273 (Raka)</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>085329683273 (Raka)</a></li>
                                 </ul>
                             </div>
                             <div class="footer-col">
