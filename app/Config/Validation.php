@@ -55,8 +55,8 @@ class Validation
 		]
 	];
 	
-	//Validasi Daftar LCC
-	public $peserta = [
+	//Validasi Peserta Udinus
+	public $udinus = [
 		'nama' 		=> 'required',
 		'instansi'	=> 'required',
 		'email'		=> [
@@ -66,9 +66,11 @@ class Validation
 		'hp'		=> [
 			'required',
 			'is_natural'
-		]
+		],
+		'nim'		=> 'required',
+		'category'	=> 'required'
 	];	 
-	public $peserta_errors = [
+	public $udinus_errors = [
 		'nama' 		=> [
 			'required'      => 'Nama wajib diisi'
 		],
@@ -82,6 +84,46 @@ class Validation
 		'hp'		=> [
 			'required'		=> 'No. HP wajib diisi',
 			'is_natural'	=> 'No. HP hanya bisa diisi bilangan bulat'
+		],
+		'nim'		=> [
+			'required'		=> 'NIM wajib diisi'
+		],
+		'category'	=> [
+			'required'		=> 'Kategori Peserta wajib diisi'
+		]
+	];
+
+	//Validasi Peserta Umum
+	public $umum = [
+		'nama' 		=> 'required',
+		'instansi'	=> 'required',
+		'email'		=> [
+			'required',
+			'valid_email'
+		],
+		'hp'		=> [
+			'required',
+			'is_natural'
+		],
+		'category'	=> 'required'
+	];	 
+	public $umum_errors = [
+		'nama' 		=> [
+			'required'      => 'Nama wajib diisi'
+		],
+		'instansi' 	=> [
+			'required'      => 'Instansi wajib diisi'
+		],
+		'email'		=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		],
+		'hp'		=> [
+			'required'		=> 'No. HP wajib diisi',
+			'is_natural'	=> 'No. HP hanya bisa diisi bilangan bulat'
+		],
+		'category'	=> [
+			'required'		=> 'Kategori Peserta wajib diisi'
 		]
 	];
 }

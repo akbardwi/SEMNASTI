@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2021 at 06:13 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Waktu pembuatan: 21 Bulan Mei 2021 pada 07.52
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `name`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `peserta`
+-- Struktur dari tabel `peserta`
 --
 
 CREATE TABLE `peserta` (
@@ -52,6 +52,8 @@ CREATE TABLE `peserta` (
   `nama` text NOT NULL,
   `email` varchar(255) NOT NULL,
   `instansi` text NOT NULL,
+  `nim` text DEFAULT NULL,
+  `category` text NOT NULL,
   `hp` text NOT NULL,
   `htm` int(1) NOT NULL,
   `tanggal_daftar` timestamp NULL DEFAULT current_timestamp()
@@ -62,29 +64,29 @@ CREATE TABLE `peserta` (
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `peserta`
+-- Indeks untuk tabel `peserta`
 --
 ALTER TABLE `peserta`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `peserta`
+-- AUTO_INCREMENT untuk tabel `peserta`
 --
 ALTER TABLE `peserta`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;

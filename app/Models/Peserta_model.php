@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class Peserta_model extends Model{
     protected $table 		= 'peserta';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['nama', 'email', 'instansi', 'hp'];
+    protected $allowedFields = ['nama', 'email', 'instansi', 'nim', 'category', 'hp'];
 
     // Listing
 	public function listing(){
@@ -16,13 +16,14 @@ class Peserta_model extends Model{
 	}
 	
 	// Count
-	public function hitung(){
+	public function category($cat){
 		$this->select('*');
+		$this->where(['category' => $cat]);
 		$query = $this->get();
-		return $query->countAllResults();
+		return $query->getResultArray();
     }
     
-    //Cek NISN
+    //Cek Email
     public function check_email($email){
         $this->select("*");
         $this->where(['email' => $email]);

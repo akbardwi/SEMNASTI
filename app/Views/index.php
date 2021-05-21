@@ -215,7 +215,7 @@
                                         </div>
                                         <div class="col text-right cstmtop">
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="radioMhs" value="Mahasiswa" name="category"
+                                                <input type="radio" id="radioMhs" value="Udinus" name="category"
                                                     class="custom-control-input" <?php if(isset($inputs['category']) and $inputs['category'] == "Mahasiswa"){ echo "checked"; } ?>>
                                                 <label class="custom-control-label" for="radioMhs">Udinus</label>
                                             </div>
