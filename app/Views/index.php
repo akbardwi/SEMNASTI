@@ -178,9 +178,36 @@
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container">
                         <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration">
-                        <div class="modal-dialog">
+                        <?php
+                        $inputs = session()->getFlashdata('inputs');
+                        $error = session()->getFlashdata('error');
+                        $errors = session()->getFlashdata('errors');
+                        $success = session()->getFlashdata('success');
+                        if(!empty($errors)){ ?>
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                            <?php foreach ($errors as $errors) : ?>
+                                <li><?= esc($errors) ?></li>
+                            <?php endforeach ?>
+                            </ul>
+                        </div>
+                        <br />
+                        <?php } if(!empty($error)){ ?>
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                <li><?= esc($error) ?></li>
+                            </ul>
+                        </div>
+                        <br />
+                        <?php } if(!empty($success)){ ?>
+                        <div class="alert alert-success" role="alert">
+                            <?= esc($success) ?><br />
+                        </div>
+                        <br />
+                        <?php } ?>
+                        <div class="modal-dialog" id="registration">
                             <div class="modal-content cstm">
-                                <form action="<?= base_url('auth/register_ot'); ?>" method="post">
+                                <form action="<?= base_url('auth/registration'); ?>" method="post">
                                     <?= csrf_field(); ?>
                                     <div class="row justify-content-between">
                                         <div class="col-4 mb-3 cstmtop">
@@ -188,13 +215,13 @@
                                         </div>
                                         <div class="col text-right cstmtop">
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="radioMhs" value="Mahasiswa" name="otCategory"
-                                                    class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Mahasiswa"){ echo "checked"; } ?>>
+                                                <input type="radio" id="radioMhs" value="Mahasiswa" name="category"
+                                                    class="custom-control-input" <?php if(isset($inputs['category']) and $inputs['category'] == "Mahasiswa"){ echo "checked"; } ?>>
                                                 <label class="custom-control-label" for="radioMhs">Udinus</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="radioUmum" value="Umum" name="otCategory"
-                                                    class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Umum"){ echo "checked"; } ?>>
+                                                <input type="radio" id="radioUmum" value="Umum" name="category"
+                                                    class="custom-control-input" <?php if(isset($inputs['category']) and $inputs['category'] == "Umum"){ echo "checked"; } ?>>
                                                 <label class="custom-control-label" for="radioUmum">Umum</label>
                                             </div>
                                         </div>
@@ -203,27 +230,17 @@
                                     <div class="modal-body">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nama_ot']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama" <?php if(isset($inputs)){ ?> value="<?= $inputs['nama']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Masukkan Nama</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">person</i>
                                             </label>
                                         </div>
                                         <div class="row" id="mahasiswa">
-                                            <div class="col-md-6">
+                                            <div class="col-md-12">
                                                 <div class="omrs-input-group">
                                                     <label class="omrs-input-underlined">
-                                                        <input type="text" name="kampus_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['kampus_ot']; ?>" <?php } ?>>
-                                                        <span class="omrs-input-label">Asal Kampus</span>
-                                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                        <i class="material-icons">school</i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="omrs-input-group">
-                                                    <label class="omrs-input-underlined">
-                                                        <input type="text" name="nim_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nim_ot']; ?>" <?php } ?>>
+                                                        <input type="text" name="nim" <?php if(isset($inputs)){ ?> value="<?= $inputs['nim']; ?>" <?php } ?>>
                                                         <span class="omrs-input-label">NIM</span>
                                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                         <i class="material-icons">image_aspect_ratio</i>
@@ -233,7 +250,15 @@
                                         </div>
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="number" name="wa_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['wa_ot']; ?>" <?php } ?> required>
+                                                <input type="text" name="institution" <?php if(isset($inputs)){ ?> value="<?= $inputs['institution']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Asal Kampus/Instansi</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">school</i>
+                                            </label>
+                                        </div>
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="number" name="hp" <?php if(isset($inputs)){ ?> value="<?= $inputs['hp']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Nomor Whatsapp</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">phone_android</i>
@@ -241,7 +266,7 @@
                                         </div>
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="email" name="email_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['email_ot']; ?>" <?php } ?> required>
+                                                <input type="email" name="email" <?php if(isset($inputs)){ ?> value="<?= $inputs['email']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Email</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">email</i>
