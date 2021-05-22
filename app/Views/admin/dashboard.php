@@ -58,6 +58,8 @@
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Instansi</th>
+                                            <th>NIM</th>
+                                            <th>Kategori</th>
                                             <th>Email</th>
                                             <th>No. HP</th>
                                             <th>HTM</th>
@@ -72,6 +74,8 @@
                                             <td><?= $no; ?></td>
                                             <td><?= $row['nama']; ?></td>
                                             <td><?= $row['instansi']; ?></td>
+                                            <td><?= $row['nim']; ?></td>
+                                            <td><?= $row['category']; ?></td>
                                             <td><?= $row['email']; ?></td>
                                             <td><?= $row['hp']; ?></td>
                                             <td>
