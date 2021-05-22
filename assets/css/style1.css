@@ -83,8 +83,19 @@ main{
 
 
 .banner {
-    background:url(./img/bubble1.png) top left no-repeat;
-    background-size: 22%;
+    background:url(../img/test2.png) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner1 {
+  background:url(../img/test3.png) ;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 800px;
+  margin-top: -700px;
 }
 
 .fluiddark{
@@ -109,6 +120,10 @@ main{
 .banner {
     height: 100vh;
     position: relative;
+    background:url(../img/test2.png) ;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
@@ -590,6 +605,7 @@ main{
   z-index:1;
   animation: bounce 2s infinite;
   margin:auto;
+  color: #fff;
 }
 
 @keyframes bounce {
@@ -1335,9 +1351,9 @@ iframe {
   height: 50px;
   border-radius: 25px;
 
-  background:#388BAF ;
+  background:#f5e1ac;
   border-style: solid;
-  border-color: #388BAF;
+  border-color: #fff;
   /*background: -webkit-linear-gradient(bottom, #7579ff, #b224ef);*/
   /*background: -o-linear-gradient(bottom, #7579ff, #b224ef);*/
   /*background: -moz-linear-gradient(bottom, #7579ff, #b224ef);*/
@@ -1359,7 +1375,7 @@ iframe {
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  background-color: #fff;
+  background-color: #f5e1ac;
   top: 0;
   left: 0;
   opacity: 1;
@@ -1370,9 +1386,9 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover {
+/* .login100-form-btn:hover {
   color: white;
-}
+} */
 
 .login100-form-btn:hover:before {
   opacity: 0;
@@ -1540,7 +1556,7 @@ iframe {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #273040;
+  background: #d8c798;
 }
 
 /* #preloader:before {
@@ -1737,7 +1753,8 @@ ul{
 .cstm{
   height: 105%;
   border-radius: 10%;
-  background-color:#d1b58f ;
+  background-color:#f5e1ac;
+  border: 2px solid white;
 }
 .cstmtop{
   padding-top: 30px;
@@ -1789,4 +1806,224 @@ ul{
 }
 .work1{
   z-index: 2;
+}
+.container1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.timeline{
+  width: 95%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.timeline ul {
+  list-style: none;
+}
+.timeline ul li {
+  padding: 20px;
+  background-color: #f5e1ac;
+  color: #000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: #ffff;
+}
+.timeline ul li:last-child{
+  margin-bottom: 0;
+}
+.timeline-content h1{
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 10px;
+  color: #000;
+}
+.timeline-content p{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.timeline-content .date{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+@media only screen and (min-width: 768px){
+  .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: gray;
+  }
+  .timeline ul li{
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .timeline ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+  .timeline ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+  .timeline ul li::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    top: 0;
+  }
+  .timeline ul li:nth-child(odd)::after {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::after {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  .timeline ul li:hover:after{
+    background-color: #f5e1ac;
+  }
+}
+.questions-container{
+  width: 900px;
+  margin: 0 auto;
+}
+@media (max-width:760px) {
+  .questions-container{
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+}
+
+.question button{
+  width: 100%;
+  background-color: #e7dcd3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border:none; outline: none;
+  font-size: 16px;
+  color: #321831;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 1px solid #321831;
+}
+.question button i{
+  transform: rotate(180deg);
+  transition: all 0.3s;
+}
+
+.question p{
+  background-color: #feb98a;
+  font-size: 14px;
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.6;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.question p.show{
+  max-height: 200px; opacity: 1;
+  padding: 20px;
+}
+
+.question button i.rotate{
+  transform: none;
+}
+.section1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section1 h2{
+	position: absolute;
+	font-size: 14vw;
+  font-weight: 900;
+	color: #f7e0ab;
+	text-align: center;
+	line-height: 0.5;
+	z-index: 10;
+	transform: skewY(-7deg);
+	text-shadow: 1px 1px 0 #7f2222,
+	2px 2px 0 #7f2222,
+	3px 3px 0 #7f2222,
+	4px 4px 0 #7f2222,
+	5px 5px 0 #7f2222,
+	10px 10px 0 #2a4d34;
+	animation: floating 5s ease-in-out infinite;
+}
+.section1 h2 span{
+	font-weight: 700;
+	font-size: 35px;
+	text-shadow: 1px 1px 0 #7f2222,
+	2px 2px 0 #7f2222,
+	3px 3px 0 #7f2222,
+	4px 4px 0 #7f2222,
+	5px 5px 0 #7f2222,
+	8px 8px 0 #2a4d34;
+}
+@keyframes floating{
+	0%,100%{
+		transform: skewY(-7deg) translate(0,-20px);
+	}
+	50%{
+		transform: skewY(-7deg) translate(0,20px);
+	}
+}
+@media (max-width:700px) {
+  .section1 h2{
+    position: absolute;
+    font-size: 12vw;
+    font-weight: 900;
+    color: #f7e0ab;
+    text-align: center;
+    line-height: 0.5;
+    z-index: 10;
+    transform: skewY(-7deg);
+    text-shadow: 1px 1px 0 #7f2222,
+    2px 2px 0 #7f2222,
+    3px 3px 0 #7f2222,
+    4px 4px 0 #7f2222,
+    5px 5px 0 #7f2222,
+    6px 6px 0 #7f2222,
+    7px 7px 0 #2a4d34;
+    animation: floating 5s ease-in-out infinite;
+  }
+  .section1 h2 span{
+    font-weight: 300;
+    font-size: 16px;
+    text-shadow: 1px 1px 0 #7f2222,
+    2px 2px 0 #7f2222,
+    3px 3px 0 #7f2222,
+    4px 4px 0 #7f2222,
+    5px 5px 0 #7f2222,
+    6px 6px 0 #7f2222,
+    7px 7px 0 #2a4d34;
+  }
+  
 }

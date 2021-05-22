@@ -48,8 +48,8 @@
                             <li><a href="#youwillget">You Wil Get</a></li>
                             <li><a href="#series">Our Series</a></li>
                             <li><a href="#registration">Registration</a></li>
-                            <!-- <li><a href="#">lorem</a></li>
-                            <li><a href="#">lorem</a></li> -->
+                            <li><a href="#timeline">Timeline</a></li>
+                            <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -59,14 +59,12 @@
                     <div class="planewrap"></div>
                     <div class="bannersplat">
                         <!-- <div class="scotty"><img src="<?= base_url(); ?>/assets/img/scotland.png" width="" height="" alt=""></div> -->
-                        <div class="fluid"></div>
-                        <div class="fluiddark"></div>
+                        <!-- <div class="fluid"></div>
+                        <div class="fluiddark"></div> -->
                         <div class="text">
-                            <h1>
-                                <span class="word d-flex justify-content-center">SEMNASTI.</span>
-                                <span class="word d-flex justify-content-center">COMING SOON.</span>
-                                <span class="word d-flex justify-content-center">STAY TUNE.</span>
-                            </h1>
+                            <div class="section1">
+                                <h2>SEMNASTI<br><span>“Transformation of Mobile Apps Development in Internet Of Things”</span></h2>
+                            </div>>
                         </div>
                     </div>
                     <div class="scroll-indicator">
@@ -78,7 +76,7 @@
 
                 <section class="about-wrapper">
                     <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset1.png" alt="" class="responsive" width="" height="" id="youwillget">
+                        <img src="<?= base_url(); ?>/assets/img/Asset1.png" alt="" class="responsive" width="" height="" id="youwillget" data-aos="fade-up" data-aos-duration="1000">
                         <div class="row d-flex  justify-content-center">
                             <div class="col-md-10">
                                 <div class="row">
@@ -122,9 +120,9 @@
                     </div>
                 </section>
 
-                <section class="work-bg">
+                <section class="work-bg" style="overflow-x: hidden">
                     <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height="" id="series">
+                        <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height="" id="series" data-aos="fade-up" data-aos-duration="1000">
                         <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="300">
                             <div class="parallelogram"></div>
                         </div>
@@ -175,9 +173,53 @@
                             </div>
                         </div>
                     </div>
+                    <div class="container">
+                        <img src="<?= base_url(); ?>/assets/img/Asset3.png" alt="" class="responsive" width="" height="" id="timeline" data-aos="fade-up" data-aos-duration="1000"> 
+                        <div class="container1">
+                            <div class="timeline">
+                                <ul data-aos="fade-up">
+                                    <li>
+                                        <div class="timeline-content">
+                                            <h2 class="date">MEI 2021</h2>
+                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
+                                            <h1>Registration </h1>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-content">
+                                            <h2 class="date">MEI 2021</h2>
+                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
+                                            <h1>Presale 1</h1>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-content">
+                                            <h2 class="date">MEI 2021</h2>
+                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
+                                            <h1>Presale 2</h1>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-content">
+                                            <h2 class="date">MEI 2021</h2>
+                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
+                                            <h1>Presale 3</h1>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-content">
+                                            <h2 class="date">MEI 2021</h2>
+                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
+                                            <h1>Theday</h1>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration">
+                        <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration" data-aos="fade-up" data-aos-duration="1000">
                         <?php
                         $inputs = session()->getFlashdata('inputs');
                         $error = session()->getFlashdata('error');
@@ -205,7 +247,7 @@
                         </div>
                         <br />
                         <?php } ?>
-                        <div class="modal-dialog" id="registration">
+                        <div class="modal-dialog" id="registration" data-aos="zoom-in">
                             <div class="modal-content cstm">
                                 <form action="<?= base_url('auth/registration'); ?>" method="post">
                                     <?= csrf_field(); ?>
@@ -287,6 +329,32 @@
                     </div>
                 </div>        
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
+                    <div class="container">
+                        <img src="<?= base_url(); ?>/assets/img/Asset2.png" alt="" class="responsive" width="" height="" id="faq" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="questions-container" data-aos="zoom-in">
+                            <div class="question">
+                                <button>
+                                    <span>Bagaimana cara mendaftar</span>
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores voluptates quia?</p>
+                            </div>
+                            <div class="question">
+                                <button>
+                                    <span>Berapa biaya untuk mendaftar</span>
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perspiciatis necessitatibus iure saepe quisquam quos accusamus natus minima.</p>
+                            </div>
+                            <div class="question">
+                                <button>
+                                    <span>Bagaimana cara untuk melakukan pembayaran</span>
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/hiring.png" class="img-fluid" width="" height="" alt=""></div>
                 </section>
                 <footer class="footer">
@@ -325,7 +393,7 @@
             </section>
         </main>
         <div id="preloader">
-            <img class="animate-flicker" src="<?= base_url(); ?>/assets/img/logosemnasti.png">
+            <img class="animate-flicker" src="<?= base_url(); ?>/assets/img/tulisan.png">
             <!--<img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">-->
         </div>
         <!-- Optional JavaScript -->
