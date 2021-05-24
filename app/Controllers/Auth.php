@@ -67,6 +67,7 @@ class Auth extends BaseController{
             $peserta  	= $db->table('peserta');
             if($peserta->countAllResults() < 300){
                 if($check_email){
+                    session()->setFlashdata('inputs', $this->request->getPost());
                     session()->setFlashdata('error', 'Email sudah terdaftar');
                     return redirect()->to(base_url()."/#registration");
                 } else {
@@ -109,6 +110,7 @@ class Auth extends BaseController{
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             if($pendaftar >= $total){
+                                session()->setFlashdata('inputs', $this->request->getPost());
                                 session()->setFlashdata('error', "Mohon maaf, kuota pendaftaran untuk kategori $category sudah penuh.");
                                 return redirect()->to(base_url()."/#registration");
                             }
