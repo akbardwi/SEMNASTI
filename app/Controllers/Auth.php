@@ -81,6 +81,9 @@ class Auth extends BaseController{
                         ];
                         $valid = "udinus";
                         $htm = 10000;
+                        $total = 200;
+                        $data = $model->category("Udinus");
+                        $pendaftar = count($data);
                     } else {
                         $peserta = [
                             'nama'      => $nama,
@@ -91,6 +94,9 @@ class Auth extends BaseController{
                         ];
                         $valid = "umum";
                         $htm = 20000;
+                        $total = 100;
+                        $data = $model->category("Umum");
+                        $pendaftar = count($data);
                     }
                     if($this->form_validation->run($peserta, $valid) == FALSE){
                         // mengembalikan nilai input yang sudah dimasukan sebelumnya
@@ -102,12 +108,16 @@ class Auth extends BaseController{
                         $batas = strtotime(date("11-06-2021 12:00:00"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
+                            if($pendaftar >= $total){
+                                session()->setFlashdata('error', "Mohon maaf, kuota pendaftaran untuk kategori $category sudah penuh.");
+                                return redirect()->to(base_url()."/#registration");
+                            }
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta SEMNASTI 2021");
                             // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2021</div>");
-                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank Jago (xxxxx) - a/n YYYY</li></ul><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div>');
+                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank BRI 015601041174506 - a/n AKBAR DWI SYAHPUTRA</li></ul><div>Peserta juga dapat bergabung ke grup WhatsApp yang sudah disediakan melalui link berikut:</div><div>https://chat.whatsapp.com/Gkg5SVm5imW3TqqnUCe4Tf</div><div><br /></div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div>');
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($peserta);
@@ -134,4 +144,10 @@ class Auth extends BaseController{
 			return redirect()->to(base_url());
 		}
 	}
+
+    public function test(){
+        $model = new Peserta_model();
+        $data = $model->category("Umum");
+        echo count($data);
+    }
 }
