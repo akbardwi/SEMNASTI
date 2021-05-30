@@ -48,7 +48,7 @@
                             <li><a href="#youwillget">You Wil Get</a></li>
                             <li><a href="#series">Our Series</a></li>
                             <li><a href="#registration">Registration</a></li>
-                            <li><a href="#timeline">Timeline</a></li>
+                            <!-- <li><a href="#timeline">Timeline</a></li> -->
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
@@ -84,7 +84,7 @@
                                         <div class="direction text-left">                                    
                                             <div class="about-icon">
                                                 <div class="circle-shape"></div>
-                                                <img src="<?= base_url(); ?>/assets/img/direction.png" class="img-fluid" width="" height="" alt="">
+                                                <img src="<?= base_url(); ?>/assets/img/Artboard3.png" class="img-fluid" width="" height="" alt="">
                                             </div>                                        
                                             <h3 class="heading">Public<BR>Relation</h3>
                                             <!-- <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The
@@ -95,7 +95,7 @@
                                         <div class="strategy text-right">
                                             <div class="about-icon">
                                                 <div class="circle-shape"></div>
-                                                <img src="<?= base_url(); ?>/assets/img/strategy.png" class="img-fluid" width="" height="" alt="">
+                                                <img src="<?= base_url(); ?>/assets/img/Artboard2.png" class="img-fluid" width="" height="" alt="">
                                             </div>                                        
                                             <div class=""></div>
                                             <h3 class="heading">Free <br>E-Certificate</h3>
@@ -103,17 +103,17 @@
                                             ge is attributed to an unknown typesetter in the 15th century who is thought</p> -->
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <!-- <div class="col-md-6">
                                         <div class="design text-left">
                                             <div class="about-icon">
                                                 <div class="circle-shape"></div>
                                                 <img src="<?= base_url(); ?>/assets/img/design.png" class="img-fluid" width="" height="" alt="">
                                             </div>                                        
                                             <h3 class="heading">Merchandise</h3>
-                                            <!-- <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The p
-                                            assage is attributed to an unknown typesetter in the 15th century who is thought</p> -->
+                                            <p class="hideme">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The p
+                                            assage is attributed to an unknown typesetter in the 15th century who is thought</p>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -137,8 +137,8 @@
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0">
                                     <div class="workintro" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext text-right">
-                                            <h3>PETRA NOVANDI</h3>
-                                            <h6>SENIOR DEVELOPER ADVOCAT AMAZON WEB SERVICE</h6>
+                                            <h3>MUHAMMAD MIRZA</h3>
+                                            <h6>Android Developer of Bukalapak</h6>
                                             <p>Aure Wines needed to improve their presence in the Ontario wine
                                             market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                             Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
@@ -155,8 +155,8 @@
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0" id="first">
                                     <div class="workintro" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext">
-                                            <h3>DENNY PRASTYA</h3>
-                                            <h6>GOPAY SYSTEM AUTOMATION</h6>
+                                            <h3>HENDRA SUMIARSA</h3>
+                                            <h6>Head IoT & Digital Enterprise PT Smartfren Telecom Tbk</h6>
                                             <p>Aure Wines needed to improve their presence in the Ontario wine
                                             market. And considering the roots of their family-owned winery reached back to Britain, soon the London
                                             Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
@@ -173,8 +173,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset3.png" alt="" class="responsive" width="" height="" id="timeline" data-aos="fade-up" data-aos-duration="1000"> 
+                    <!-- <div class="container">
+                        <img src="/assets/img/Asset3.png" alt="" class="responsive" width="" height="" id="timeline" data-aos="fade-up" data-aos-duration="1000"> 
                         <div class="container1">
                             <div class="timeline">
                                 <ul data-aos="fade-up">
@@ -216,7 +216,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container">
                         <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration" data-aos="fade-up" data-aos-duration="1000">
@@ -251,11 +251,11 @@
                             <div class="modal-content cstm">
                                 <form action="<?= base_url('auth/registration'); ?>" method="post">
                                     <?= csrf_field(); ?>
-                                    <div class="row justify-content-between">
-                                        <div class="col-4 mb-3 cstmtop">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-4 cstmtop">
                                             <p class="radio-label">Kategori Peserta</p>
                                         </div>
-                                        <div class="col text-right cstmtop">
+                                        <div class="col-md-6 cstmtop">
                                             <div class="custom-control custom-radio custom-control-inline">
                                                 <input type="radio" id="radioMhs" value="Udinus" name="category"
                                                     class="custom-control-input" <?php if(isset($inputs['category']) and $inputs['category'] == "Mahasiswa"){ echo "checked"; } ?>>
@@ -327,35 +327,37 @@
                             </div>
                         </div>
                     </div>
-                </div>        
+                    </div>        
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container">
                         <img src="<?= base_url(); ?>/assets/img/Asset2.png" alt="" class="responsive" width="" height="" id="faq" data-aos="fade-up" data-aos-duration="1000">
                         <div class="questions-container" data-aos="zoom-in">
                             <div class="question">
                                 <button>
-                                    <span>Bagaimana cara mendaftar</span>
+                                    <span>How do I register</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asperiores voluptates quia?</p>
+                                <p>Step : <br>
+                                    1.	Please fill in the form above.<br>
+                                    2.	Check out the further information from email to complete the registration fee.</p>
                             </div>
                             <div class="question">
                                 <button>
-                                    <span>Berapa biaya untuk mendaftar</span>
+                                    <span>How much the registration fee</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas perspiciatis necessitatibus iure saepe quisquam quos accusamus natus minima.</p>
+                                <p>It’s Rp10.000 for Udinus’s Colleger only. For general, it costs Rp. 20.000.</p>
                             </div>
                             <div class="question">
                                 <button>
-                                    <span>Bagaimana cara untuk melakukan pembayaran</span>
+                                    <span>How do I make a payment</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi laboriosam ea odit voluptate culpa quas explicabo.</p>
+                                <p>Payment can be made by transferring to the bank account that listed on the confirmation email.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="workclose"><img src="<?= base_url(); ?>/assets/img/hiring.png" class="img-fluid" width="" height="" alt=""></div>
+                    <!-- <div class="workclose"><img src="<?= base_url(); ?>/assets/img/hiring.png" class="img-fluid" width="" height="" alt=""></div> -->
                 </section>
                 <footer class="footer">
                     <div class="section__heading">
@@ -366,8 +368,8 @@
                             <div class="footer-col">
                                 <h4>Contact Person</h4>
                                 <ul>
-                                    <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
-                                    <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=6282241698249"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0822-4169-8249 (Ekki)</a></li>
+                                    <li><a href="https://api.whatsapp.com/send?phone=6285326629159"><i class="fa fa-whatsapp" style="font-size: 25px; color: black; padding-right:10px;"></i>0853-2662-9159 (Akbar)</a></li>
                                 </ul>
                             </div>
                             <div class="footer-col">
