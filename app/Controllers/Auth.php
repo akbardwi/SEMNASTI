@@ -94,7 +94,7 @@ class Auth extends BaseController{
                             'hp'        => $hp
                         ];
                         $valid = "umum";
-                        $htm = 20000;
+                        $htm = 15000;
                         $total = 100;
                         $data = $model->category("Umum");
                         $pendaftar = count($data);
