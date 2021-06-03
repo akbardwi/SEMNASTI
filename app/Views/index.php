@@ -46,7 +46,7 @@
                         <ul>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="#youwillget">You Wil Get</a></li>
-                            <li><a href="#series">Our Series</a></li>
+                            <li><a href="#series">Our Speaker</a></li>
                             <li><a href="#registration">Registration</a></li>
                             <!-- <li><a href="#timeline">Timeline</a></li> -->
                             <li><a href="#faq">FAQ</a></li>
@@ -74,10 +74,10 @@
                 <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
                 </div>
 
-                <section class="about-wrapper">
+                <section class="about-wrapper" id="youwillget">
                     <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset1.png" alt="" class="responsive" width="" height="" id="youwillget" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="row d-flex  justify-content-center">
+                        <img src="<?= base_url(); ?>/assets/img/Asset1.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
+                        <div class="row d-flex  justify-content-center cstmrow">
                             <div class="col-md-10">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -121,8 +121,8 @@
                 </section>
 
                 <section class="work-bg" style="overflow-x: hidden">
-                    <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height="" id="series" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="container" id="series">
+                        <img src="<?= base_url(); ?>/assets/img/Asset5.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
                         <div data-aos="fade-right" data-aos-offset="300" data-aos-duration="300">
                             <div class="parallelogram"></div>
                         </div>
@@ -131,7 +131,7 @@
                                 <div class="col-md-5 col-sm-6 col-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-offset="300">
                                     <div class="workpic">
                                         <div class="big-circle-shape"></div>
-                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1.png" class="img-fluid" width="" height="" alt="" >
+                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1fix.png" class="img-fluid" width="" height="" alt="" >
                                     </div>
                                 </div>                            
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0">
@@ -139,9 +139,7 @@
                                         <div class="worktext text-right">
                                             <h3>MUHAMMAD MIRZA</h3>
                                             <h6>Android Developer of Bukalapak</h6>
-                                            <p>Aure Wines needed to improve their presence in the Ontario wine
-                                            market. And considering the roots of their family-owned winery reached back to Britain, soon the London
-                                            Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
+                                            <p>He is an alumnus of Dian Nuswantoro University who graduated in 2017. During his college years, he was a lab assistant from 2014 to 2015. He worked at Bukalapak as an Android Developer from 2018 until now.</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -157,16 +155,14 @@
                                         <div class="worktext">
                                             <h3>HENDRA SUMIARSA</h3>
                                             <h6>Head IoT & Digital Enterprise PT Smartfren Telecom Tbk</h6>
-                                            <p>Aure Wines needed to improve their presence in the Ontario wine
-                                            market. And considering the roots of their family-owned winery reached back to Britain, soon the London
-                                            Born Wine Company was, well, born. As part of the bold rebrand, a strong online presence was needed.</p> 
+                                            <p>An alumnus of the Bandung Institute of Technology (ITB) and has continued his studies at several universities abroad.  He has worked at Indosat Ooredoo for 5 years and now he is working at PT Smartfren Telecom as Head of IoT & Digital Enterprise from September 2019 until now.</p> 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-sm-6 col-12 offset-md-1" id="second" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-offset="300">
                                     <div class="workpic">
                                         <div class="big-circle-shape" ></div>
-                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA2.png" class="img-fluid" width="" height="" alt="">
+                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA2fix.png" class="img-fluid" width="" height="" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -218,8 +214,8 @@
                         </div>
                     </div> -->
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
-                    <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height="" id="registration" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="container" id="registration">
+                        <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
                         <?php
                         $inputs = session()->getFlashdata('inputs');
                         $error = session()->getFlashdata('error');
@@ -329,8 +325,8 @@
                     </div>
                     </div>        
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy1.png" class="img-fluid" width="" height="" alt=""></div>
-                    <div class="container">
-                        <img src="<?= base_url(); ?>/assets/img/Asset2.png" alt="" class="responsive" width="" height="" id="faq" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="container" id="faq">
+                        <img src="<?= base_url(); ?>/assets/img/Asset2.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
                         <div class="questions-container" data-aos="zoom-in">
                             <div class="question">
                                 <button>
@@ -379,17 +375,25 @@
                                 </ul>
                             </div>
                             <div class="footer-col">
-                                <h4>follow us</h4>
+                                <h4>Follow us</h4>
                                 <div class="social-links">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/semnastihmti/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/semnasti_hmti?lang=id"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/semnasti/"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="footer-col">
+                                <h4>For more information follow</h4>
+                                <div class="social-links">
+                                    <a href="https://www.instagram.com/hmtiudinus/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://hmtiudinus.org/"><i class="fa fa-globe"></i></a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="footer-bottom">
-                        <p>copyright &copy;2021 designed by <span>syifa</span></p>
+                        <p>copyright &copy;2021 <a href="https://hmtiudinus.org/">HMTI</a></p>
                     </div>
                 </footer>
             </section>

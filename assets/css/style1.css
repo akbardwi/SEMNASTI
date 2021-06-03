@@ -258,7 +258,7 @@ main{
 
 
 .about-wrapper{
-  padding:70px 0px;
+  padding:10px 0px;
   width:100%;
   position:relative;
   /* background: url('../img/bubble3.png') 140% 100% no-repeat; */
@@ -286,7 +286,11 @@ main{
     color:white;
     font-weight:600;
   }
-  
+  .about-icon img{
+    margin-top: -50px;
+    height: 30%;
+  }
+
 }
 .hideme{
   font-size:19px;
@@ -307,6 +311,9 @@ main{
   position:relative;
   width:100%;
   z-index:2;
+}
+.about-icon img{
+  margin-top: -50px;
 }
 
 
@@ -370,12 +377,22 @@ main{
     color:#2b5837;
     font-weight:700;
   }
+  .worktext p{
+    padding-bottom: 20px;
+    line-height:30px;
+    margin-top:30px;
+    color:#333333;
+    font-weight:400;
+  }
+  .about-wrapper{
+    padding:10px 0px;
+  }
 }
 .worktext p{
-  font-size:22px;
-  line-height:35px;
+  font-size:19px;
+  line-height:30px;
   margin-top:30px;
-  color:#7c8898;
+  color:#333333;
   font-weight:400;
 }
 
@@ -2042,4 +2059,7 @@ ul{
     7px 7px 0 #2a4d34;
   }
   
+}
+.cstmrow{
+  padding-top: 40px;
 }
