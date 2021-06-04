@@ -138,7 +138,7 @@
                                     <div class="workintro" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext text-right">
                                             <h3>MUHAMMAD MIRZA</h3>
-                                            <h6>Android Developer of Bukalapak</h6>
+                                            <h6>APLICATION DEVELOPER AT BUKALAPAK</h6>
                                             <p>He is an alumnus of Dian Nuswantoro University who graduated in 2017. During his college years, he was a lab assistant from 2014 to 2015. He worked at Bukalapak as an Android Developer from 2018 until now.</p> 
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                     <div class="workintro" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext">
                                             <h3>HENDRA SUMIARSA</h3>
-                                            <h6>Head IoT & Digital Enterprise PT Smartfren Telecom Tbk</h6>
+                                            <h6>HEAD OF IOT PT SMARTFREEN TELECOM</h6>
                                             <p>An alumnus of the Bandung Institute of Technology (ITB) and has continued his studies at several universities abroad.  He has worked at Indosat Ooredoo for 5 years and now he is working at PT Smartfren Telecom as Head of IoT & Digital Enterprise from September 2019 until now.</p> 
                                         </div>
                                     </div>
