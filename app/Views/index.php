@@ -342,7 +342,7 @@
                                     <span>How much the registration fee</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>It’s Rp10.000 for Udinus’s Colleger only. For general, it costs Rp. 20.000.</p>
+                                <p>It’s Rp10.000 for Udinus’s Colleger only. For general, it costs Rp. 15.000.</p>
                             </div>
                             <div class="question">
                                 <button>
