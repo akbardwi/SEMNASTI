@@ -64,8 +64,8 @@ class Auth extends BaseController{
             $model 		= new Peserta_model();
             $check_email= $model->check_email($email);
             $db      	= \Config\Database::connect();
-            $peserta  	= $db->table('peserta');
-            if($peserta->countAllResults() < 300){
+            $Tpeserta  	= $db->table('peserta');
+            if($Tpeserta->countAllResults() < 300){
                 if($check_email){
                     session()->setFlashdata('inputs', $this->request->getPost());
                     session()->setFlashdata('error', 'Email sudah terdaftar');
@@ -85,6 +85,7 @@ class Auth extends BaseController{
                         $total = 200;
                         $data = $model->category("Udinus");
                         $pendaftar = count($data);
+                        $nim = $nim;
                     } else {
                         $peserta = [
                             'nama'      => $nama,
@@ -98,6 +99,7 @@ class Auth extends BaseController{
                         $total = 100;
                         $data = $model->category("Umum");
                         $pendaftar = count($data);
+                        $nim = "-";
                     }
                     if($this->form_validation->run($peserta, $valid) == FALSE){
                         // mengembalikan nilai input yang sudah dimasukan sebelumnya
@@ -114,12 +116,13 @@ class Auth extends BaseController{
                                 session()->setFlashdata('error', "Mohon maaf, kuota pendaftaran untuk kategori $category sudah penuh.");
                                 return redirect()->to(base_url()."/#registration");
                             }
+                            $urut = $Tpeserta->countAllResults()+1;
                             $email_smtp = \Config\Services::email();
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta SEMNASTI 2021");
                             // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2021</div>");
-                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank BRI 015601041174506 - a/n AKBAR DWI SYAHPUTRA</li></ul><div>Peserta juga dapat bergabung ke grup WhatsApp yang sudah disediakan melalui link berikut:</div><div>https://chat.whatsapp.com/Gkg5SVm5imW3TqqnUCe4Tf</div><div><br /></div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div>');
+                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Berikut data pendaftaran Anda:</div><div>No Urut : '.$urut.'<br />Kategori : '.$category.'</div><div>Nama : '.$nama.'</div><div>NIM : '.$nim.'</div><div>Asal Instansi : '.$instansi.'</div><div>WhatsApp : '.$hp.'<br />Email : '.$email.'</div><div><br /></div><div><div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank BRI 015601041174506 - a/n AKBAR DWI SYAHPUTRA</li></ul><div>Peserta juga dapat bergabung ke grup WhatsApp yang sudah disediakan melalui link berikut:</div><div>https://chat.whatsapp.com/Gkg5SVm5imW3TqqnUCe4Tf</div><div><br /></div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div></div>');
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($peserta);
