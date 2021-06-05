@@ -78,6 +78,7 @@ class Admin extends BaseController{
         $data = array(  'title'			=> 'Halaman Dashboard',
                         'user'          => $model->detail($session->get('admin_user')),
                         'peserta'       => $peserta->listing(),
+                        'lunas'         => $peserta->lunas(),
                         'content'		=> 'admin/dashboard');
         return view('admin/layout/wrapper',$data);
     }

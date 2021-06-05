@@ -10,7 +10,7 @@ class Peserta_model extends Model{
     // Listing
 	public function listing(){
 		$this->select('*');
-		$this->orderBy("id", "DESC");
+		$this->orderBy("id", "ASC");
 		$query = $this->get();
 		return $query->getResultArray();
 	}
@@ -19,6 +19,14 @@ class Peserta_model extends Model{
 	public function category($cat){
 		$this->select('*');
 		$this->where(['category' => $cat]);
+		$query = $this->get();
+		return $query->getResultArray();
+    }
+
+	// Lunas Pembayaran
+	public function lunas(){
+		$this->select('*');
+		$this->where(['htm' => 1]);
 		$query = $this->get();
 		return $query->getResultArray();
     }

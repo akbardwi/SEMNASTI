@@ -131,14 +131,14 @@
                                 <div class="col-md-5 col-sm-6 col-12" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-offset="300">
                                     <div class="workpic">
                                         <div class="big-circle-shape"></div>
-                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1fix.png" class="img-fluid" width="" height="" alt="" >
+                                        <img src="<?= base_url(); ?>/assets/img/PEMBICARA1fixx.png" class="img-fluid" width="" height="" alt="" >
                                     </div>
                                 </div>                            
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0">
                                     <div class="workintro" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext text-right">
                                             <h3>MUHAMMAD MIRZA</h3>
-                                            <h6>ANDROID DEVELOPER AT BUKALAPAK</h6>
+                                            <h6>ANDROID DEVELOPER OF BUKALAPAK</h6>
                                             <p>He is an alumnus of Dian Nuswantoro University who graduated in 2017. During his college years, he was a lab assistant from 2014 to 2015. He worked at Bukalapak as an Android Developer from 2018 until now.</p> 
                                         </div>
                                     </div>

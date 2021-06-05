@@ -14,6 +14,39 @@
 
         <!-- Main content -->
         <section class="content">
+            <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <div class="col-lg-6 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-info">
+                            <div class="inner">
+                                <h3><?= count($peserta); ?></h3>
+
+                                <p>Total Peserta</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-person-add"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-6 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3><?= count($lunas); ?></h3>
+
+                                <p>Lunas Pembayaran</p>
+                            </div>
+                            <div class="icon">
+                                <i class="ion ion-stats-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                </div>
+            </div>
             <?php
             $inputs = session()->getFlashdata('inputs');
             $errors = session()->getFlashdata('errors');
