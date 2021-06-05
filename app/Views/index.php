@@ -154,7 +154,7 @@
                                     <div class="workintro" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                         <div class="worktext text-left">
                                             <h3>HENDRA SUMIARSA</h3>
-                                            <h6>HEAD OF IOT PT SMARTFREEN TELECOM</h6>
+                                            <h6>HEAD OF IOT PT SMARTFREN TELECOM</h6>
                                             <p>An alumnus of the Bandung Institute of Technology (ITB) and has continued his studies at several universities abroad.  He has worked at Indosat Ooredoo for 5 years and now he is working at PT Smartfren Telecom as Head of IoT & Digital Enterprise from September 2019 until now.</p> 
                                         </div>
                                     </div>
@@ -274,18 +274,6 @@
                                                 <i class="material-icons">person</i>
                                             </label>
                                         </div>
-                                        <div class="row" id="mahasiswa">
-                                            <div class="col-md-12">
-                                                <div class="omrs-input-group">
-                                                    <label class="omrs-input-underlined">
-                                                        <input type="text" name="nim" <?php if(isset($inputs)){ ?> value="<?= $inputs['nim']; ?>" <?php } ?> required>
-                                                        <span class="omrs-input-label">NIM</span>
-                                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                        <i class="material-icons">image_aspect_ratio</i>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
                                                 <input type="text" name="institution" <?php if(isset($inputs)){ ?> value="<?= $inputs['institution']; ?>" <?php } ?> required>
@@ -342,7 +330,7 @@
                                     <span>How much the registration fee</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>It’s Rp10.000 for Udinus Colleger only. For general, it costs Rp. 15.000.</p>
+                                <p>You only need to pay a registration fee of Rp. 10.000</p>
                             </div>
                             <div class="question">
                                 <button>

@@ -55,7 +55,7 @@ class Auth extends BaseController{
 		$method = $_SERVER['REQUEST_METHOD'];
 		if($method == "POST"){
 			$nama = filter_var($this->request->getVar('nama'), FILTER_SANITIZE_STRING);
-            $nim = filter_var($this->request->getVar('nim'), FILTER_SANITIZE_STRING);
+            // $nim = filter_var($this->request->getVar('nim'), FILTER_SANITIZE_STRING);
             $instansi = filter_var($this->request->getVar('institution'), FILTER_SANITIZE_STRING);
             $category = filter_var($this->request->getVar('category'), FILTER_SANITIZE_STRING);
             $email = filter_var($this->request->getVar('email'), FILTER_SANITIZE_EMAIL);
@@ -76,16 +76,15 @@ class Auth extends BaseController{
                             'nama'      => $nama,
                             'email'     => $email,
                             'instansi'  => $instansi,
-                            'nim'       => $nim,
+                            // 'nim'       => $nim,
                             'category'  => $category,
                             'hp'        => $hp
                         ];
-                        $valid = "udinus";
+                        $valid = "umum";
                         $htm = 10000;
                         $total = 200;
                         $data = $model->category("Udinus");
                         $pendaftar = count($data);
-                        $nim = $nim;
                     } else {
                         $peserta = [
                             'nama'      => $nama,
@@ -95,11 +94,10 @@ class Auth extends BaseController{
                             'hp'        => $hp
                         ];
                         $valid = "umum";
-                        $htm = 15000;
+                        $htm = 10000;
                         $total = 100;
                         $data = $model->category("Umum");
                         $pendaftar = count($data);
-                        $nim = "-";
                     }
                     if($this->form_validation->run($peserta, $valid) == FALSE){
                         // mengembalikan nilai input yang sudah dimasukan sebelumnya
@@ -122,7 +120,7 @@ class Auth extends BaseController{
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta SEMNASTI 2021");
                             // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2021</div>");
-                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Berikut data pendaftaran Anda:</div><div>No Urut : '.$urut.'<br />Kategori : '.$category.'</div><div>Nama : '.$nama.'</div><div>NIM : '.$nim.'</div><div>Asal Instansi : '.$instansi.'</div><div>WhatsApp : '.$hp.'<br />Email : '.$email.'</div><div><br /></div><div><div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank BRI 015601041174506 - a/n AKBAR DWI SYAHPUTRA</li></ul><div>Peserta juga dapat bergabung ke grup WhatsApp yang sudah disediakan melalui link berikut:</div><div>https://chat.whatsapp.com/Gkg5SVm5imW3TqqnUCe4Tf</div><div><br /></div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div></div>');
+                            $email_smtp->setMessage('<div>Halo, '. $nama.'</div>Terima kasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021 yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro Semarang.<div><br /></div><div>Berikut data pendaftaran Anda:</div><div>No Urut : '.$urut.'<br />Kategori : '.$category.'</div><div>Nama : '.$nama.'</div><div>Asal Instansi : '.$instansi.'</div><div>WhatsApp : '.$hp.'<br />Email : '.$email.'</div><div><br /></div><div><div><br /></div><div>Selanjutnya, peserta dapat melunasi administrasi sebesar Rp '.number_format($htm,2,',','.').' dengan mentransfer ke rekening berikut:</div><div><ul style="text-align: left;"><li>Bank BRI 015601041174506 - a/n AKBAR DWI SYAHPUTRA</li></ul><div>Peserta juga dapat bergabung ke grup WhatsApp yang sudah disediakan melalui link berikut:</div><div>https://chat.whatsapp.com/Gkg5SVm5imW3TqqnUCe4Tf</div><div><br /></div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div></div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul></div></div>');
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($peserta);
