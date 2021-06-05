@@ -152,7 +152,7 @@
                             <div class="row d-flex align-items-center">
                                 <div class="col-md-5 offset-md-1 col-sm-12 offset-sm-0" id="first">
                                     <div class="workintro" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                                        <div class="worktext">
+                                        <div class="worktext text-left">
                                             <h3>HENDRA SUMIARSA</h3>
                                             <h6>HEAD OF IOT PT SMARTFREEN TELECOM</h6>
                                             <p>An alumnus of the Bandung Institute of Technology (ITB) and has continued his studies at several universities abroad.  He has worked at Indosat Ooredoo for 5 years and now he is working at PT Smartfren Telecom as Head of IoT & Digital Enterprise from September 2019 until now.</p> 
@@ -278,7 +278,7 @@
                                             <div class="col-md-12">
                                                 <div class="omrs-input-group">
                                                     <label class="omrs-input-underlined">
-                                                        <input type="text" name="nim" <?php if(isset($inputs)){ ?> value="<?= $inputs['nim']; ?>" <?php } ?>>
+                                                        <input type="text" name="nim" <?php if(isset($inputs)){ ?> value="<?= $inputs['nim']; ?>" <?php } ?> required>
                                                         <span class="omrs-input-label">NIM</span>
                                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                         <i class="material-icons">image_aspect_ratio</i>
@@ -342,7 +342,7 @@
                                     <span>How much the registration fee</span>
                                     <i class="fas fa-chevron-up"></i>
                                 </button>
-                                <p>It’s Rp10.000 for Udinus’s Colleger only. For general, it costs Rp. 15.000.</p>
+                                <p>It’s Rp10.000 for Udinus Colleger only. For general, it costs Rp. 15.000.</p>
                             </div>
                             <div class="question">
                                 <button>
@@ -357,7 +357,7 @@
                 </section>
                 <footer class="footer">
                     <div class="section__heading">
-                        <h2 class="section__title"><span class="heading-stroke" data-title="SEMNASTI">SEMNASTI</span></h2>
+                        <img src="assets/img/logosemnasti.png" class="responsive1">
                     </div>
                     <div class="isi">
                         <div class="row">
@@ -376,23 +376,33 @@
                             </div>
                             <div class="footer-col">
                                 <h4>Follow us</h4>
-                                <div class="social-links">
-                                    <a href="https://www.facebook.com/semnastihmti/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://twitter.com/semnasti_hmti?lang=id"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/semnasti/"><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <!-- <div class="social-links"> -->
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/semnastihmti/"><i class="fab fa-facebook-f" style="padding-right:10px;"></i>Official Facebook Semnasti</a></li>
+                                        <li><a href="https://twitter.com/semnasti_hmti?lang=id"><i class="fab fa-twitter"style="padding-right:10px;"></i>Official Twitter Semnasti</a></li>
+                                        <li><a href="https://www.instagram.com/semnasti/"><i class="fab fa-instagram"style="padding-right:10px;"></i>Official Instagram Semnasti</a></li>
+                                    </ul>
+                                <!-- </div> -->
                             </div>
                             <div class="footer-col">
+                                <!-- <h4>Follow us</h4> -->
+                                <ul  class="samping">
+                                    <li><a href="https://www.instagram.com/hmtiudinus/"><i class="fab fa-instagram" style="padding-right:10px;"></i>Official Instagram HMTI</a></li>
+                                    <li><a href="https://hmtiudinus.org/"><i class="fa fa-globe" style="padding-right:10px;"></i>Official Website HMTI</a></li>
+                                </ul>
+                            </div>
+                            <!-- <div class="footer-col">
                                 <h4>For more information follow</h4>
                                 <div class="social-links">
                                     <a href="https://www.instagram.com/hmtiudinus/"><i class="fab fa-instagram"></i></a>
                                     <a href="https://hmtiudinus.org/"><i class="fa fa-globe"></i></a>
 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="footer-bottom">
+                        <hr style="width:80px">
                         <p>copyright &copy;2021 <a href="https://hmtiudinus.org/">HMTI</a></p>
                     </div>
                 </footer>
