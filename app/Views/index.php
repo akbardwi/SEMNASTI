@@ -169,50 +169,66 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="container">
-                        <img src="/assets/img/Asset3.png" alt="" class="responsive" width="" height="" id="timeline" data-aos="fade-up" data-aos-duration="1000"> 
-                        <div class="container1">
-                            <div class="timeline">
-                                <ul data-aos="fade-up">
-                                    <li>
-                                        <div class="timeline-content">
-                                            <h2 class="date">MEI 2021</h2>
-                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
-                                            <h1>Registration </h1>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-content">
-                                            <h2 class="date">MEI 2021</h2>
-                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
-                                            <h1>Presale 1</h1>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-content">
-                                            <h2 class="date">MEI 2021</h2>
-                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
-                                            <h1>Presale 2</h1>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-content">
-                                            <h2 class="date">MEI 2021</h2>
-                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
-                                            <h1>Presale 3</h1>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="timeline-content">
-                                            <h2 class="date">MEI 2021</h2>
-                                            <hr style="width:100%;border-color: #fff;background-color:#fff;height:2px; margin:0px;">
-                                            <h1>Theday</h1>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="container" id="how">
+                        <img src="<?= base_url(); ?>/assets/img/register.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
+                        <div class="containers">
+                            <!--first section-->
+                            <div class="row align-items-center how-it-works">
+                                <div class="col-2 text-center bottom">
+                                    <div class="circle">1</div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">Fill in the registration form</h5>
+                                    <!-- <p>Fill in the registration form</p> -->
+                                </div>
+                                </div>
+                                <!--path between 1-2-->
+                                <div class="row timeline">
+                                <div class="col-2">
+                                    <div class="corner top-right"></div>
+                                </div>
+                                <div class="col-8">
+                                    <hr/>
+                                </div>
+                                <div class="col-2">
+                                    <div class="corner left-bottom"></div>
+                                </div>
+                                </div>
+                                <!--second section-->
+                                <div class="row align-items-center justify-content-end how-it-works">
+                                <div class="col-6 text-right">
+                                    <h5 data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">Make a payment of 10,000 to the account that has been sent to the email</h5>
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p> -->
+                                </div>
+                                <div class="col-2 text-center full">
+                                    <div class="circle">2</div>
+                                </div>
+                                </div>
+                                <!--path between 2-3-->
+                                <div class="row timeline">
+                                <div class="col-2">
+                                    <div class="corner right-bottom"></div>
+                                </div>
+                                <div class="col-8">
+                                    <hr/>
+                                </div>
+                                <div class="col-2">
+                                    <div class="corner top-left"></div>
+                                </div>
+                                </div>
+                                <!--third section-->
+                                <div class="row align-items-center how-it-works">
+                                <div class="col-2 text-center top">
+                                    <div class="circle">3</div>
+                                </div>
+                                <div class="col-6">
+                                    <h5 data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine"> Confirmation of payment through the contact person provided</h5>
+                                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</p> -->
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <div class="workclose"><img src="<?= base_url(); ?>/assets/img/wavy3.png" class="img-fluid" width="" height="" alt=""></div>
                     <div class="container" id="registration">
                         <img src="<?= base_url(); ?>/assets/img/Asset6.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">
