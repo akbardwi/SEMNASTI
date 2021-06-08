@@ -47,6 +47,7 @@
                             <li><a href="index.php">Home</a></li>
                             <li><a href="#youwillget">You Wil Get</a></li>
                             <li><a href="#series">Our Speaker</a></li>
+                            <li><a href="#how">How To Register</a></li>
                             <li><a href="#registration">Registration</a></li>
                             <!-- <li><a href="#timeline">Timeline</a></li> -->
                             <li><a href="#faq">FAQ</a></li>
