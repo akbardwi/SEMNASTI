@@ -48,7 +48,17 @@ class Admin extends BaseController{
         }
         
         if($data['htm'] == 0){
-            $query = $db->query("UPDATE peserta SET htm = 1 WHERE id = '$id'");
+            $email = $data['email'];
+            $email_smtp = \Config\Services::email();
+            $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
+            $email_smtp->setTo("$email");
+            $email_smtp->setSubject("Konfirmasi Pendaftaran Peserta SEMNASTI 2021");
+            // $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai Peserta di acara SEMNASTI 2021. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br /></div><div>(Kasih tau nggak yaa xixixi)</div><div><br /></div><div>Salam, SEMNASTI 2021</div>");
+            $email_smtp->setMessage('<div>Hallo, '.$data['nama'].'</div><div><br /></div><div>Terima kasih telah melunasi administrasi untuk acara SEMNASTI 2021. Selanjutnya Anda akan mendapatkan link akses ke Zoom Meeting yang akan digunakan untuk acara SEMNASTI 2021, link akses akan kami bagikan H-1 sebelum acara, jadi pastikan email ini tetap aktif.</div><div>Jika ada pertanyaan, Anda dapat menghubungi contact person berikut:</div><div><ul style="text-align: left;"><li>Akbar - 085326629159 (WhatsApp)</li><li>Ekki - 082241698249 (WhatsApp)</li></ul><div>Terima kasih, panitia SEMNASTI 2021</div></div>');
+            $kirim = $email_smtp->send();
+            if($kirim){
+                $query = $db->query("UPDATE peserta SET htm = 1 WHERE id = '$id'");
+            }
         } else {
             $query = $db->query("UPDATE peserta SET htm = 0 WHERE id = '$id'");
         }
