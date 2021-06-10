@@ -51,6 +51,7 @@
                             <li><a href="#registration">Registration</a></li>
                             <!-- <li><a href="#timeline">Timeline</a></li> -->
                             <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#sponsor">Sponsored</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -358,7 +359,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="workclose"><img src="<?= base_url(); ?>/assets/img/hiring.png" class="img-fluid" width="" height="" alt=""></div> -->
+                </section>
+                <section id="sponsor" class="container" style="margin-top:30px;">
+                    <img src="<?= base_url(); ?>/assets/img/Sponsor.png" alt="" class="responsive" width="" height=""  data-aos="fade-up" data-aos-duration="1000">  
+                        <div class="flex-container">
+                            <div class="flex-item-right">
+                                <img src="<?= base_url(); ?>/assets/img/Bj.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
                 </section>
                 <footer class="footer">
                     <div class="section__heading">

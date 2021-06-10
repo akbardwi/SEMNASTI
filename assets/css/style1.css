@@ -1764,7 +1764,7 @@ ul{
   font-family: "Open Sans";
   padding-top: 40px;
   color: #000;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 .footer-col{
    width: 25%;
@@ -2229,4 +2229,34 @@ ul{
     font-size: 16px;
   }
   
+}
+@media(min-width: 700px){
+  .flex-item-right {
+  padding: 10px;
+  flex: 50%;
+  margin:1.5em;
+
+  }
+}
+
+.flex-item-right p {
+  color: #fff;
+
+}
+
+
+@media (max-width: 700px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-item-right {
+    flex: 50%;
+    margin-top: 20px;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
 }
